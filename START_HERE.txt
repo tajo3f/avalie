@@ -1,0 +1,21 @@
+TAJO AVALIE SaaS V2
+
+1) Para somente conhecer o sistema:
+   - deixe src/config.js com demoMode: true
+   - publique a pasta na Vercel
+   - painel: /mercado-modelo/painel/login
+   - avaliação: /mercado-modelo/caixa-01
+
+2) Para produção real:
+   - leia docs/SETUP_SUPABASE.md
+   - banco novo: execute INSTALL_ALL.sql
+   - banco V1 existente: leia docs/MIGRANDO_DA_V1.md
+   - crie Admin TAJO com scripts/BOOTSTRAP_TAJO_ADMIN.sql
+   - publique a função supabase/functions/invite-user
+   - edite src/config.js com Supabase URL + anon key
+   - coloque demoMode: false
+
+Credenciais DEMO:
+proprietario@demo.com / 123456
+gerente@demo.com / 123456
+admin@tajo.com / 123456

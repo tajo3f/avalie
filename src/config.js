@@ -1,16 +1,30 @@
 export const APP_CONFIG = {
-  // true = frontend funciona completo com dados locais demonstrativos.
-  // false = usa os endpoints do Supabase configurados abaixo.
-  useMocks: true,
-  supabaseUrl: '',
-  supabaseAnonKey: '',
-  defaultTenantSlug: 'supermercado-modelo',
-  appName: 'TAJO Avalia',
+  productName: 'TAJO Avalie',
+  productTagline: 'Sistema de Avaliação de Serviços',
+  companyName: 'TAJO Digital',
+  baseDomain: 'avalie.tajodigital.com.br',
   supportEmail: 'joaopaulo@tajodigital.com.br',
-  plan: {
-    name: 'Profissional',
-    monthlyPrice: 390,
-    setupPrice: 390,
-    pointLimit: 12
-  }
+
+  // PREENCHA para usar o Supabase real. A anon key pode ficar no frontend;
+  // a segurança é garantida pelas políticas RLS e RPCs do banco.
+  supabaseUrl: 'https://SEU-PROJETO.supabase.co',
+  supabaseAnonKey: 'SUA_CHAVE_ANON_PUBLICA',
+
+  // true = demonstração comercial sem banco. false = Supabase real.
+  // Se URL/chave estiverem com placeholder, o sistema entra em demo automaticamente.
+  demoMode: true,
+
+  defaultTenantSlug: 'mercado-modelo',
+  defaultPointSlug: 'caixa-01',
+  setupPrice: 390,
+  monthlyPrice: 390,
+  pointLimit: 12,
+  logoPath: '/public/tajo-avalie-logo-web.png'
+}
+
+export function isDemoMode() {
+  return APP_CONFIG.demoMode ||
+    !APP_CONFIG.supabaseUrl.startsWith('https://') ||
+    APP_CONFIG.supabaseUrl.includes('SEU-PROJETO') ||
+    APP_CONFIG.supabaseAnonKey.includes('SUA_CHAVE')
 }

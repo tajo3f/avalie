@@ -1,0 +1,22 @@
+# Checklist de produção
+
+- [ ] Banco criado em projeto Supabase exclusivo
+- [ ] Todas as migrations aplicadas
+- [ ] `verify_install_v2.sql` sem itens ausentes
+- [ ] Admin TAJO criado
+- [ ] `invite-user` publicada
+- [ ] Site URL do Supabase configurada
+- [ ] Redirect URLs configuradas
+- [ ] `src/config.js` com URL e anon key
+- [ ] `demoMode: false`
+- [ ] Domínio `avalie.tajodigital.com.br` apontado para Vercel
+- [ ] HTTPS ativo
+- [ ] Primeiro cliente criado
+- [ ] Proprietário convidado
+- [ ] 12 pontos testados
+- [ ] Turnos testados
+- [ ] Avaliação 1 estrela testada
+- [ ] Ocorrência automática confirmada
+- [ ] Exportação CSV testada
+- [ ] Políticas de privacidade/termos publicadas antes da escala comercial
+- [ ] Rotina de backup e monitoramento definida
